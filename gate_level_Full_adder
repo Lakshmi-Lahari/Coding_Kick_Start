@@ -1,0 +1,14 @@
+module FA(
+    input x,
+    input y,
+    input z,
+    output sum,
+    output carry
+    );
+ wire w1,w2,w3;
+ xor X1(sum,x,y,z);
+ and A1(w1,x,y);
+ and A2(w2,y,z);
+ and A3(w3,x,z);
+ or C1(carry,w1,w2,w3);
+ endmodule
